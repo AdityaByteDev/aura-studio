@@ -264,3 +264,36 @@ footer{
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important}
 }
+
+/* ---------- NAVBAR COLOUR & FONT OVERRIDE ---------- */
+nav {
+  background: #ffffff;                     /* pure white bar */
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  color: #000000;                          /* black company name */
+  font-weight: 700;                        /* bold */
+  font-family: 'Cormorant Garamond', serif;/* elegant high-contrast serif */
+  letter-spacing: .05em;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+/* remove blue + inherit colour for every link */
+.nav-links a {
+  color: #000000;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+}
+
+/* hover still uses accent gold */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+/* underline stays gold */
+.nav-links a::after {
+  background: var(--accent);
+}
